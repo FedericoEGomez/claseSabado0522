@@ -19,6 +19,7 @@ module.exports = validarJWT = async (req, res, next) => {
         }
         next();
     } catch (error) {
+        console.log(error)
         res.status(501).json({
             msg: "token no valido", error
         })
